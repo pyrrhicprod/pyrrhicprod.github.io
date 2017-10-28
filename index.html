@@ -28,9 +28,37 @@ max-height: auto;
     <a class="pyrrhic-bar-item pyrrhic-button pyrrhic-padding-large pyrrhic-hide-medium pyrrhic-hide-large pyrrhic-right" style = "height:auto;"> </a>
     <div class = "header-logo"></div>
 
-    <center><a href = "https://www.youtube.com/watch?v=WZHZWXR1wPs">
-      <img src = "images/pyrrhic_prod_logo.jpg" style = "max-width:40%; height:auto;overflow:scroll;">
-        </a>
+      <h2 class="w3-center">Automatic Slideshow</h2>
+
+<center><div class="w3-content w3-section" style="max-width:500px">
+  <a href = "https://www.facebook.com/pyrrhicproductions/"target="_blank">
+      <img class="mySlides" src="images/pyrrhic_prod_logo.jpg" style="max-width:100%; height:auto;overflow:scroll;">
+      </a>
+  <a href = "https://www.youtube.com/watch?v=WZHZWXR1wPs"target="_blank">
+  <img class="mySlides" src="images/circles_main.jpg" style="max-width:100%">
+      </a>
+  <a href = "https://www.youtube.com/watch?v=JysrtYnlpk8"target="_blank">
+  <img class="mySlides" src="images/panic_main.jpg" style="max-width:100%">
+      </a>
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 5000); // Change image every 2 seconds
+}
+</script>
+
         <br>
       <div class = "coming-soon">
 
