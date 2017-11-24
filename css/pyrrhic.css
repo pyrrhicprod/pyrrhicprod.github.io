@@ -32,7 +32,7 @@ h3{
         }
     h3 {
         font-size:30px;
-    }
+        }    
     }
 @media all and (max-width: 800px) { /* screen size until 1000px */
         h1 {
@@ -49,6 +49,9 @@ h3{
         }
     h3{
         font-size:20px;
+        }    
+    h4{
+        font-size:15px;
     }    
     .mainimage{
         background-position: 50%;
@@ -78,8 +81,8 @@ h3{
 }
 .work-text{
     text-align:center;
-    color: black;
-    background-color: #FDFBD6;
+    color: #FFFCEA;
+    background-color: #2A3354;
     padding-top: 2%;
 }
 
