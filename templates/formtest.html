@@ -1,0 +1,153 @@
+
+{% extends "base.html" %}
+{% block head %} 
+
+<!-- Main Content -->
+<div class="content-wrapper">
+       <br>
+       <br>
+       <br>
+       <br>
+     </div>
+
+        <section class="section section-contact no-margin">
+                <div class="contact-box-wrapper">
+                    <div class="row">
+                        <div class="col-lg-20 col-lg-offset-2">
+                            <div class="row">
+                                <div class="col-md-14">
+                                        <div class = "contactform">
+                                                <form id="contactform" action="//formspree.io/nate.spilman@gmail.com" method="POST">
+                                                    <div class="col-sm-7 slideanim">
+                                                      <div class="row">
+                                                        <div class="col-sm-6 form-group">
+                                                          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                                                        </div>
+                                                        <div class="col-sm-6 form-group">
+                                                          <input class="form-control" id="email" name="_replyto" placeholder="Email" type="email" required>
+                                                        </div>
+                                                      </div>
+                                                      <textarea class="form-control" id="comments" name="message" placeholder="Message" rows="5"></textarea><br>
+                                                      <div class="row">
+                                                        <div class="col-sm-12 form-group">
+                                                          <button class="btn btn-default pull-right" type="submit">Send</button>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                    <input type="hidden" name="_next" value="https://www.facebook.com/profile.php?id=210561549077640&ref=br_rs"/>
+                                                    <input type="text" name="_gotcha" style="display:none" />   
+                                                </form>
+                                            </div>
+
+                                <div class="col-md-8 col-md-offset-1 col-lg-offset-2">
+                                    <div class="contact-block-widget">
+                                        <div class="contact-block">
+                                            <h5 class="block-title">Address</h5>
+                                            <p>44 New Design Street, Melbourne 005<br />Australia 300</p>
+                                        </div>
+
+                                        <div class="contact-block">
+                                            <h5 class="block-title">Contact information</h5>
+
+                                            <p><a href="mailto:narcos@teslathemes.com">narcos@teslathemes.com</a><br />+ 01 (300) 555 889</p>
+                                        </div>
+
+                                        <div class="contact-block">
+                                            <h5 class="block-title">We are social</h5>
+
+                                            <ul class="clean-list social-items">
+                                                <li>
+                                                    <a href="#" target="_blank">
+                                                        <i class="icon-facebook"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" target="_blank">
+                                                        <i class="icon-twitter"></i>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="#" target="_blank">
+                                                        <i class="icon-linkedin"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" target="_blank">
+                                                        <i class="icon-instagram"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" target="_blank">
+                                                        <i class="icon-pinterest"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" target="_blank">
+                                                        <i class="icon-google-plus"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-wrapper">
+                    <div id="map-canvas" class="contact-map" data-options='{
+                        "marker": "img/map-marker.png",
+                        "marker_coord": {
+                            "lat": "40.717483",
+                            "lon": "-73.994255"
+                        },
+                        "map_center": {
+                            "lat": "40.717548",
+                            "lon": "-73.991723"
+                        },
+                        "zoom": "15"
+                    }'></div>
+                </div>
+            </section>
+
+            <!-- Video Box -->
+            <div class="video-box" data-parallax-bg="img/video-box-bg.jpg">
+                <div class="box-img-wrapper">
+                    <div class="box-img">
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="video-toggle-wrapper align-center">
+                    <span class="video-toggle">
+                        <i class="icon-video-icon"></i>
+                    </span>
+                </div>
+            </div>
+        
+	
+	<footer>
+	{% include "footer.html" %}
+	{% block foot %} {% endblock %}
+	</footer>
+
+
+	<!-- Scripts -->
+	<script src="../js/vendors/jquery.js"></script>
+	<script src="../js/vendors/modernizr.js"></script>
+	<script src="../js/vendors/smooth-scroll.js"></script>
+	<script src="../js/vendors/slick.js"></script>
+	<script src="../js/vendors/imagesloaded.js"></script>
+	<script src="../js/vendors/isotope.js"></script>
+	<script src="../js/vendors/velocity.js"></script>
+	<script src="../js/vendors/instagram.js"></script>
+	<script src="../js/vendors/nouislider.js"></script>
+	<script src="http://maps.googleapis.com/maps/api/js"></script>
+	<script src="../js/options.js"></script>
+</body>
+
+{% endblock %}
+
+</html>

@@ -1,0 +1,88 @@
+<html>
+{% extends "base.html" %}
+{% block head %} 
+
+<body data-smooth-scroll="on">
+		<div id="page">
+			<!-- Main Content -->
+			<div class="content-wrapper">
+					<div class="main-slider tt-slider pslider pcontact" data-fade="true" data-speed="850" data-dots="false" data-arrows="false" data-infinite="true">
+							<div class="intro-box-inner container">
+							</div>	
+						</div>
+				<!-- Intro Box -->
+				<div class="intro-box inverted" data-parallax-bg="img/intro-box-contact.jpg">
+					<div class="box-img-wrapper">
+						<div class="box-img">
+							<span></span>
+						</div>
+					</div>
+
+					
+				</div>
+
+				<!-- Contact Section -->
+				<section class="section section-contact no-margin">
+						<div class="contact-box-wrapper">
+							<div class="row">
+								<div class="col-lg-20 col-lg-offset-2">
+									<div class="row pcontactmobile">
+											<h2 class = 'pcontactus'>CONTACT US</h2>
+											<p class = 'phitusup'>Hit us up below, or drop us a line at <b>FILM@PYRRHICPRODUCTIONS.COM </b> </p>
+											<br>
+											<form id="contactform" action="//formspree.io/film@pyrrhicproductions.com" method="POST">
+												<div class="row pcontactformmobile">
+													<div class="col-sm-12 form-group pformmobile">
+													<input class="form-control pform" id="name" name="name" placeholder="Name" type="text" required>
+													</div>
+													<div class="col-sm-12 form-group pformmobile">
+													<input class="form-control pform" id="email" name="_replyto" placeholder="Email" type="email" required>
+													</div>
+												</div>
+												<br>
+												<textarea class="form-control pcomment" id="comments" name="message" placeholder="Message" rows="5"></textarea><br>
+												<div class="row">
+													<br>
+													<div class = "psend">
+														<button class="btn btn-default psendbutton" type="submit">Send</button>
+													</div>
+													
+												</div>
+												<input type="hidden" name="_next" value="https://www.facebook.com/profile.php?id=210561549077640&ref=br_rs"/>
+												<input type="text" name="_gotcha" style="display:none" />   
+												</form>
+												<br>
+												<br>
+											
+										</div>
+	
+										
+									</div>
+								</div>
+							</div>
+						</div>
+	
+						
+			<footer>
+			{% include "footer.html" %}
+			{% block foot %} {% endblock %}
+			</footer>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="../js/vendors/jquery.js"></script>
+	<script src="../js/vendors/modernizr.js"></script>
+	<script src="../js/vendors/smooth-scroll.js"></script>
+	<script src="../js/vendors/slick.js"></script>
+	<script src="../js/vendors/imagesloaded.js"></script>
+	<script src="../js/vendors/isotope.js"></script>
+	<script src="../js/vendors/velocity.js"></script>
+	<script src="../js/vendors/instagram.js"></script>
+	<script src="../js/vendors/nouislider.js"></script>
+	<script src="http://maps.googleapis.com/maps/api/js"></script>
+	<script src="../js/options.js"></script>
+
+</body>
+{% endblock %}
+</html>

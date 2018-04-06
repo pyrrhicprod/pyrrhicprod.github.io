@@ -1,0 +1,87 @@
+
+{% extends "base.html" %}
+{% block head %} 
+
+<!-- Main Content -->
+			<div class="content-wrapper">
+					
+				<!-- Main Slider -->
+				<div class="main-slider tt-slider pslider pabout" data-fade="true" data-speed="850" data-dots="false" data-arrows="false" data-infinite="true">
+                        <div class="intro-box-inner container">
+                        </div>	
+                    </div>
+			</div>
+<!-- Description Sections -->
+<section class="paboutus section section-description no-margin">
+        <div class="section-title container align-center">
+            <h2>What we do</h2>
+        </div>
+
+        <div class="container">
+            <p class="align-center pabouttext"><b>Pyrrhic Productions </b> is Jersey City's premier video production company, a subsidiary<b> Arts on the Hudson</b>. Aside from providing quality commercial video content, we are dedicated to the cause of preserving Jersey City's art scene and creating content for budding artists to blossom. We are all artists ourselves, and are passionate about our art. Let's work together and make something great.  </p>
+        </div>
+			<!-- Team Section -->
+					<div class="section-title container align-center">
+						<h2><span>team members</span></h2>
+					</div>
+
+					<!-- Team Members -->
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-lg-20 col-lg-offset-2">
+								<div class="row">
+
+									{% for person in staffInfo %}
+
+									<div class="col-sm-12 col-md-8">
+										<div class="team-member-box">
+											<div class="box-cover pteammembermobile">
+												<div class="member-info-box align-center">
+													<p>{{ person[3] }}</p>
+
+												</div>
+												<img src="img/{{ person[2] }}" class = "pteamphoto" alt="team member avatar" />
+											</div>
+
+											<div class="box-body align-center">
+												<h4 class="name">{{ person[0] }}</h4>
+												<p class="position">{{ person[1] }}</p>
+											</div>
+										</div>
+									</div>
+									{% endfor %}
+								
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+			</div>
+		</div>
+	
+	<footer>
+			{% include "footer.html" %}
+	{% block foot %} {% endblock %}
+	</footer>
+</div>
+</div>
+	<!-- Scripts -->
+	<script src="js/vendors/jquery.js"></script>
+	<script src="js/vendors/modernizr.js"></script>
+	<script src="js/vendors/smooth-scroll.js"></script>
+	<script src="js/vendors/slick.js"></script>
+	<script src="js/vendors/imagesloaded.js"></script>
+	<script src="js/vendors/isotope.js"></script>
+	<script src="js/vendors/velocity.js"></script>
+	<script src="js/vendors/instagram.js"></script>
+	<script src="js/vendors/nouislider.js"></script>
+	<script src="http://maps.googleapis.com/maps/api/js"></script>
+	<script src="js/options.js"></script>
+</body>
+
+{% endblock %}
+
+</html>

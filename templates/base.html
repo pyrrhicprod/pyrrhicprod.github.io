@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html class="perspective">
+<head>
+	<meta charset="utf-8" />
+    <title>Pyrrhic Productions</title>
+    <meta name="Pyrrhic Productions" content="Jersey City's premier video production company." />
+    <meta name="author" content="Pyrrhic Productions" />
+    <link rel="shortcut icon" href="../img/newPyrrhicLogo2.jpg" type="image/x-icon" />
+
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+	<!-- Style CSS -->
+	<link href="https://fonts.googleapis.com/css?family=Spectral+SC" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400italic,700,700italic%7CSatisfy" />
+    <link rel="stylesheet" href="../css/vendors/icomoon.css" />    
+	<link rel="stylesheet" href="../css/screen.css" />
+	<link rel="stylesheet" href = "../css/pyrrhic.css"/>
+
+</head>
+<body data-smooth-scroll="on">
+	<div id="page">
+		<!-- Search Form Wrapper -->
+		<div class="search-form-wrapper">
+			<form class="search-form">
+				<input type="text" class="form-input check-value" placeholder="Start typing..." />
+				<button class="form-submit">
+					<i class="icon-search"></i>
+				</button>
+			</form>
+
+			<span class="close-search-form-wrapper">
+				<i class="icon-cross"></i>
+			</span>
+		</div>
+		
+		<!-- Page Wrapper -->
+		<div class="page-wrapper">
+			<!-- Header -->
+			<header class="main-header pmenu">
+				<!-- Mobile Brand -->
+				<a href="index.html" class="mobile-brand">
+					<img src="../img/{{ plogo }}" class = "pyrrhicbrand" alt="site identity" />
+				</a>
+
+				<nav>
+					<!-- Menu Items -->
+					<ul>
+						<li class="menu-item-has-children pmenutext">
+							<a class = 'pmenutext' href="index.html">Home</a>
+									</li>
+						<li class = 'pmenutext'>
+							<a class = 'pmenutext' href="about.html">About</a>
+						</li>
+						
+													<li class="brand-holder">
+							<a class = 'pmenutext' href="index.html">
+								<img src="../img/{{ plogo }}" class = 'pyrrhicbrand' alt="site identity" />
+							</a>
+						</li>
+						<li class="menu-item-has-children pmenutext">
+							<a class = 'pmenutext' href="https://www.instagram.com/pyrrhicproductions/" target ="_blank">Instagram</a>
+						</li>
+						<li> 
+							<a class = 'pmenutext' href="contact.html">Contact</a>
+						</li>
+					</ul>
+
+					<!-- Mobile Nav Toggle -->
+					<span class="mobile-navigation-toggle">
+						<span class="icon">
+							<i class="line"></i>
+							<i class="line"></i>
+							<i class="line"></i>
+						</span>
+
+						<span class="menu-toggle-title">Menu</span>
+					</span>
+
+				</nav>
+			</header>
+		
+			{% block head %} {% endblock %}
