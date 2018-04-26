@@ -1,6 +1,6 @@
-myvenv
-php
-templates
-images
-build
-Pyrrhic_DB
+/myvenv/
+/php/
+/templates/
+/images/
+/build/
+/Pyrrhic_DB/
