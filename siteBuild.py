@@ -13,7 +13,7 @@ freezer = Freezer(app)
 today = datetime.datetime.today()
 
 #variables
-logo = 'newPyrrhicLogo.png'
+logo = 'pyrrhic_logo.jpg'
 
 
 app.database = "Pyrrhic_DB"
