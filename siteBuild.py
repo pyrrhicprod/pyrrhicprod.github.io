@@ -16,6 +16,7 @@ today = datetime.datetime.today()
 logo = 'pyrrhic_logo.jpg'
 
 
+
 app.database = "Pyrrhic_DB"
 def connectdb():
     # type: () -> object
@@ -51,6 +52,20 @@ def contact():
     plogo = logo
     staffInfo = conn.execute("SELECT * from about_staff").fetchall()
     return render_template('contact.html', **locals())
+
+@app.route("/<work>.html")
+def work(work):
+    plogo = logo
+    content = conn.execute("SELECT * from home_work where name = '{}'".format(work)).fetchall()[0]
+    return render_template('content.html',**locals())
+
+
+@freezer.register_generator
+def work():
+    homeWork = conn.execute("SELECT * from home_work").fetchall()
+    for i in homeWork:
+        work = i[1]
+        yield {'work':work}
 
 if __name__ == "__main__":
     """ Builds this site.

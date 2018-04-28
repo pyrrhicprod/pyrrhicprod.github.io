@@ -12,6 +12,20 @@
     src: url("../fonts/Crevice Stencil.woff") format('woff');
 }
 
+.pcentercontent{
+    padding-top:100px;
+}
+
+.pcontentvids{
+    width:100%;
+    height:400px;
+}
+
+.pcontenttitle{
+    text-align: center;
+    font-size: 20px;
+}
+
 .showcase-textbox h2 span{
     font-family: Crevice;
 }
@@ -227,6 +241,20 @@ footer .widget_about img{
 
 @media screen and (max-width: 700px) and (min-width:401px) {
 
+    .pcentercontent{
+        padding-top:225px;
+    }
+    
+    .pcontentvids{
+        width:100%;
+        height:400px;
+    }
+    
+    .pcontenttitle{
+        text-align: center;
+        font-size: 20px;
+    }
+
     .pmenu{
         height:175px;
     }
@@ -339,6 +367,20 @@ footer .widget_about img{
     .pslider{
         max-height: 100px;
         max-width: auto;
+    }
+
+    .pcentercontent{
+        padding-top:225px;
+    }
+    
+    .pcontentvids{
+        width:100%;
+        height:200px;
+    }
+    
+    .pcontenttitle{
+        text-align: center;
+        font-size: 20px;
     }
 
     .pportfoliomobile{
