@@ -38,18 +38,21 @@ conn = connectdb()
 @app.route("/")
 def homepage():
     plogo = logo
+    title = 'Video Production | Jersey City | Pyrrhic Productions'
     homeWork = conn.execute("SELECT * from home_work").fetchall()
     return render_template('index.html', **locals())
 
 @app.route("/about.html")
 def about():
     plogo = logo
+    title = 'About | Jersey City | Pyrrhic Productions'
     staffInfo = conn.execute("SELECT * from about_staff").fetchall()
     return render_template('about.html', **locals())
 
 @app.route("/contact.html")
 def contact():
     plogo = logo
+    title = 'Contact | Jersey City | Pyrrhic Productions'
     staffInfo = conn.execute("SELECT * from about_staff").fetchall()
     return render_template('contact.html', **locals())
 
@@ -57,6 +60,8 @@ def contact():
 def work(work):
     plogo = logo
     content = conn.execute("SELECT * from home_work where urlName = '{}'".format(work)).fetchall()[0]
+
+    title =  content[1] + ' | Jersey City | Pyrrhic Productions'
     return render_template('content.html',**locals())
 
 
