@@ -56,7 +56,7 @@ def contact():
 @app.route("/<work>.html")
 def work(work):
     plogo = logo
-    content = conn.execute("SELECT * from home_work where name = '{}'".format(work)).fetchall()[0]
+    content = conn.execute("SELECT * from home_work where urlName = '{}'".format(work)).fetchall()[0]
     return render_template('content.html',**locals())
 
 
@@ -64,7 +64,7 @@ def work(work):
 def work():
     homeWork = conn.execute("SELECT * from home_work").fetchall()
     for i in homeWork:
-        work = i[1]
+        work = i[7]
         yield {'work':work}
 
 if __name__ == "__main__":
