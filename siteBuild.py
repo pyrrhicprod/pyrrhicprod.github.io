@@ -26,6 +26,14 @@ def movehome():
     files = os.listdir('build')
     for file in files:
         shutil.move('build/' + file, file)
+
+
+def get_markdown(md):
+    path = 'markdown/'+md
+    f = open(path, 'r')
+    content = markdown.markdown(f.read())
+    output = Markup(markdown.markdown(content))
+    return output
     
 conn = connectdb()
 
@@ -40,6 +48,7 @@ def homepage():
     plogo = logo
     title = 'Video Production | Jersey City | Pyrrhic Productions'
     homeWork = conn.execute("SELECT * from home_work").fetchall()
+    description = get_markdown('index.md')
     return render_template('index.html', **locals())
 
 @app.route("/about.html")
@@ -47,6 +56,7 @@ def about():
     plogo = logo
     title = 'About | Jersey City | Pyrrhic Productions'
     staffInfo = conn.execute("SELECT * from about_staff").fetchall()
+    description = get_markdown('about.md')
     return render_template('about.html', **locals())
 
 @app.route("/contact.html")
@@ -54,13 +64,14 @@ def contact():
     plogo = logo
     title = 'Contact | Jersey City | Pyrrhic Productions'
     staffInfo = conn.execute("SELECT * from about_staff").fetchall()
+    description = get_markdown('contact.md')
     return render_template('contact.html', **locals())
 
 @app.route("/<work>.html")
 def work(work):
     plogo = logo
     content = conn.execute("SELECT * from home_work where urlName = '{}'".format(work)).fetchall()[0]
-
+    description = get_markdown('index.md')
     title =  content[1] + ' | Jersey City | Pyrrhic Productions'
     return render_template('content.html',**locals())
 
