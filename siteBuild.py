@@ -5,6 +5,7 @@ import markdown
 from flask_frozen import Freezer
 import os
 import shutil
+from youtubeAPI import Video
 
 app = Flask(__name__)
 freezer = Freezer(app)
@@ -72,6 +73,9 @@ def work(work):
     plogo = logo
     content = conn.execute("SELECT * from home_work where urlName = '{}'".format(work)).fetchall()[0]
     description = get_markdown('index.md')
+    ytID = content[4].split('=')[1]
+    ytVid = Video(ytID)
+    print(ytVid.views)
     title =  content[1] + ' | Jersey City | Pyrrhic Productions'
     return render_template('content.html',**locals())
 

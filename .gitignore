@@ -5,3 +5,5 @@ images/
 build/
 Pyrrhic_DB/
 markdown/
+*.json
+*.py
