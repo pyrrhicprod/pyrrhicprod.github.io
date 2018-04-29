@@ -1,9 +1,0 @@
-AIzaSyC_cpeKpnQ3rP5yLQ5vH21xt3FjGMQgfk8
-
-
-URLs
-http://www.googleapis.com/youtube/v3/activities?part=snippet,contentDetails&CHannel_ID = < Channel_ID >&key = <API KEY>&maxResults = 50 
-
-
-example:
-https://www.googleapis.com/youtube/v3/activities?part=snippet,contentDetails&channelId%20=UCw-e2YZlqhM8fdBRgcBlGjA&key=AIzaSyC_cpeKpnQ3rP5yLQ5vH21xt3FjGMQgfk8&maxResults%20=%2050

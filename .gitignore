@@ -6,4 +6,5 @@ build/
 Pyrrhic_DB/
 markdown/
 *.json
-*.py
+*.Py
+*.pyc
