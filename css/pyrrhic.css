@@ -231,6 +231,15 @@ footer .widget_about img{
     padding: 20% 0 20% 0;
 }
 
+.pportfoliotext{
+    height:100%;
+    background-color:#C6BDC6;
+}
+
+.pportfoliopadding{
+    padding: 20% 0 20% 0;
+}
+
 @media screen and (max-width: 1000px) and (min-width:701px) {
     .pportfoliomobile{
         width: 70%;
@@ -262,6 +271,7 @@ footer .widget_about img{
     }
 
 @media screen and (max-width: 700px) and (min-width:401px) {
+    
 
     .pcentercontent{
         padding-top:225px;
@@ -393,6 +403,11 @@ footer .widget_about img{
 }
 
 @media screen and (max-width: 400px) {
+    .pportfoliopadding{
+        padding: 0;
+        margin-bottom:10px;
+    }
+
     .pslider{
         max-height: 100px;
         max-width: auto;
