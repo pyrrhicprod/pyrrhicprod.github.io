@@ -53,6 +53,14 @@ body{
     color: black;
 }
 
+.pportfoliobutton{
+    background-color: #C6BDC6;
+    color: #121327;
+    max-width:220px;
+    max-height:25px;
+    border-radius:0 25px 25px 0;
+}
+
 .form-control{
     border:1px solid rgb(224, 224, 224);
 }
@@ -207,7 +215,21 @@ footer .widget_about img{
     height:150px;
 }
 
+.pportfoliobody{
+    padding-top:175px;
+}
 
+.psection-portfolio{
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
+.pportfoliotextbox{
+    max-width:95%;
+    height:100%;
+    background-color:#C6BDC6;
+    padding: 20% 0 20% 0;
+}
 
 @media screen and (max-width: 1000px) and (min-width:701px) {
     .pportfoliomobile{
@@ -305,7 +327,14 @@ footer .widget_about img{
         max-width:95%;
         padding:0px;
     }
-    
+
+    .pportfoliotextbox{
+        max-width:95%;
+        padding:0px;
+        height: 100%;
+        background-color:#C6BDC6;
+    }
+
     .pshowcasemobile{
         margin-left:2%;
     }

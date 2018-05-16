@@ -48,7 +48,7 @@ conn = connectdb()
 def homepage():
     plogo = logo
     title = 'Video Production | Jersey City | Pyrrhic Productions'
-    homeWork = conn.execute("SELECT * from home_work").fetchall()
+    homeWork = conn.execute("SELECT * from home_work order by publishdate desc").fetchall()[0:3]
     description = get_markdown('index.md')
     return render_template('index.html', **locals())
 
@@ -74,10 +74,18 @@ def work(work):
     content = conn.execute("SELECT * from home_work where urlName = '{}'".format(work)).fetchall()[0]
     description = get_markdown('index.md')
     ytID = content[4].split('=')[1]
-    ytVid = Video(ytID)
-    print(ytVid.views)
+    #ytVid = Video(ytID)
+    
     title =  content[1] + ' | Jersey City | Pyrrhic Productions'
     return render_template('content.html',**locals())
+
+@app.route("/portfolio.html")
+def portfolio():
+    plogo = logo
+    title =  'Portfolio | Jersey City | Pyrrhic Productions'
+    portfolio = conn.execute("SELECT * from home_work order by publishdate desc").fetchall()
+    return render_template('portfolio.html',**locals())
+
 
 
 @freezer.register_generator
