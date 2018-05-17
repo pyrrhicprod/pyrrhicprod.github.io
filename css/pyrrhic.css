@@ -12,6 +12,10 @@
     src: url("../fonts/Crevice Stencil.woff") format('woff');
 }
 
+h2{
+    color:#EBAE2A;
+}
+
 .pcentercontent{
     padding-top:100px;
 }
@@ -233,7 +237,7 @@ footer .widget_about img{
 
 .pportfoliotext{
     height:100%;
-    background-color:#C6BDC6;
+    color: #EBAE2A;
 }
 
 .pportfoliopadding{
