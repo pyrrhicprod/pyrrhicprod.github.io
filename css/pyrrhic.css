@@ -12,6 +12,13 @@
     src: url("../fonts/Crevice Stencil.woff") format('woff');
 }
 
+.image {
+    border-radius: 4px;
+    border: 0;
+    display: inline-block;
+    position: relative;
+}
+
 h2{
     color:#EBAE2A;
 }
@@ -539,3 +546,124 @@ footer .widget_about img{
 
 }
 
+
+
+/* Spotlights from Poxilarity */
+
+.spotlights {
+		margin: 0 0 2em 0;
+	}
+
+		.spotlights section {
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			-moz-align-items: center;
+			-webkit-align-items: center;
+			-ms-align-items: center;
+			align-items: center;
+			-moz-flex-direction: row;
+			-webkit-flex-direction: row;
+			-ms-flex-direction: row;
+			flex-direction: row;
+			border-top: solid 1px;
+			margin-top: 3.4em;
+			padding-top: 3.4em;
+		}
+
+			.spotlights section .image {
+				position: relative;
+				width: 35%;
+			}
+
+				.spotlights section .image img {
+					display: block;
+					width: 100%;
+				}
+
+			.spotlights section .content {
+				-ms-flex: 1;
+				margin: 0 0 0 4em;
+				width: 65%;
+			}
+
+				.spotlights section .content > :last-child {
+					margin-bottom: 0;
+				}
+
+			.spotlights section:first-child {
+				border-top: 0;
+				margin-top: 0;
+				padding-top: 0;
+			}
+
+			.spotlights section:nth-child(2n) {
+				-moz-flex-direction: row-reverse;
+				-webkit-flex-direction: row-reverse;
+				-ms-flex-direction: row-reverse;
+				flex-direction: row-reverse;
+			}
+
+				.spotlights section:nth-child(2n) .content {
+					margin: 0 4em 0 0;
+				}
+
+		@media screen and (max-width: 980px) {
+
+			.spotlights section {
+				-moz-align-items: -moz-flex-start;
+				-webkit-align-items: -webkit-flex-start;
+				-ms-align-items: -ms-flex-start;
+				align-items: flex-start;
+			}
+
+				.spotlights section .image {
+					top: 0.35em;
+					width: 40%;
+				}
+
+				.spotlights section .content {
+					margin: 0 0 0 3em;
+					width: 60%;
+				}
+
+				.spotlights section:nth-child(2n) .content {
+					margin: 0 3em 0 0;
+				}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			.spotlights section {
+				margin-top: 2em;
+				padding-top: 2em;
+			}
+
+		}
+
+		@media screen and (max-width: 480px) {
+
+			.spotlights section {
+				display: block;
+			}
+
+				.spotlights section .image {
+					display: block;
+					top: 0;
+					width: 100%;
+					margin: 0 0 2em 0;
+				}
+
+				.spotlights section .content {
+					margin: 0;
+					width: 100%;
+					text-align: center;
+				}
+
+		}
+
+	.spotlights section {
+		border-top-color: rgba(144, 144, 144, 0.2);
+	}

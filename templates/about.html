@@ -35,25 +35,35 @@
 							<div class="col-lg-20 col-lg-offset-2">
 								<div class="row">
 
-									{% for person in staffInfo %}
 
-									<div class="col-sm-12 col-md-8">
-										<div class="team-member-box">
-											<div class="box-cover pteammembermobile">
-												<div class="member-info-box align-center">
-													<p>{{ person[3] }}</p>
 
-												</div>
-												<img src="img/{{ person[2] }}" class = "pteamphoto" alt="team member avatar" />
+									<section id="three" class="wrapper style1">
+										<div class="inner">
+											<div class="spotlights">
+												{% for person in staffInfo %}
+													{% if loop.index % 2 != 0%}
+												<section>
+													<span class="image"><img src="img/{{person[2]}}" alt="" /></span>
+													<div class="content">
+														<h2>{{person[0]}} - {{person[1]}}</h2>
+														<p>{{person[3]}}</p>
+													</div>
+												</section>
+						
+												{% endif %}
+												
+												{% if loop.index % 2 == 0%}
+												<section>
+													<span class="image"><img src="img/{{person[2]}}" alt="" /></span>
+													<div class="content">
+														<h2>{{person[0]}} - {{person[1]}}</h2>
+														<p>{{person[3]}}</p>
+													</div>
+												</section>
+						
+												{% endif %}
+												{% endfor %}
 											</div>
-
-											<div class="box-body align-center">
-												<h4 class="name">{{ person[0] }}</h4>
-												<p class="position">{{ person[1] }}</p>
-											</div>
-										</div>
-									</div>
-									{% endfor %}
 								
 										</div>
 									</div>
