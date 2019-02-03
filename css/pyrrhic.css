@@ -12,6 +12,10 @@
     src: url("../fonts/Crevice Stencil.woff") format('woff');
 }
 
+.main-header{
+    position: relative;
+}
+
 .image {
     border-radius: 4px;
     border: 0;
@@ -450,6 +454,10 @@ footer .widget_about img{
         background-position: center center;
         background-size: 200%;
         height: 200px;
+    }
+
+    .content-wrapper{
+        display:none;
     }
 
     .phome{
